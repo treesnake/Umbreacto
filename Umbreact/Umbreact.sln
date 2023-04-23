@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1705.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbreact.UmbHeadless", "Umbreact.UmbHeadless\Umbreact.UmbHeadless.csproj", "{58A5A0ED-8853-4AD0-9C42-F9CCA097EE32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmbReact.ReactProj", "UmbReact.ReactProj\UmbReact.ReactProj.csproj", "{95D7AE42-9F7D-490E-AEA9-9E74050E099D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58A5A0ED-8853-4AD0-9C42-F9CCA097EE32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58A5A0ED-8853-4AD0-9C42-F9CCA097EE32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58A5A0ED-8853-4AD0-9C42-F9CCA097EE32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58A5A0ED-8853-4AD0-9C42-F9CCA097EE32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95D7AE42-9F7D-490E-AEA9-9E74050E099D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95D7AE42-9F7D-490E-AEA9-9E74050E099D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95D7AE42-9F7D-490E-AEA9-9E74050E099D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95D7AE42-9F7D-490E-AEA9-9E74050E099D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE06B50E-F461-40A2-AF35-AD5D92CA5AE6}
+	EndGlobalSection
+EndGlobal
