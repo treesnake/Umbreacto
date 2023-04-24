@@ -1,18 +1,18 @@
 ﻿<Properties StartupConfiguration="{58A5A0ED-8853-4AD0-9C42-F9CCA097EE32}|Umbraco.Web.UI">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Umbreact.UmbHeadless/Models/BlockProps.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Umbreact.UmbHeadless/Models/Prop.cs">
     <Files>
-      <File FileName="Umbreact.UmbHeadless/Views/_Layout.cshtml" Line="8" Column="7" />
-      <File FileName="Umbreact.UmbHeadless/Views/NormalPage.cshtml" Line="2" Column="87" />
-      <File FileName="Umbreact.UmbHeadless/Controllers/UmApiControllers/ContentBlockController.cs" Line="33" Column="25" />
-      <File FileName="Umbreact.UmbHeadless/Business/ContentSerializer.cs" Line="19" Column="16" />
-      <File FileName="Umbreact.UmbHeadless/Models/Prop.cs" Line="17" Column="40" />
-      <File FileName="Umbreact.UmbHeadless/Models/BlockProps.cs" Line="10" Column="20" />
+      <File FileName="Umbreact.UmbHeadless/Views/_Layout.cshtml" />
+      <File FileName="Umbreact.UmbHeadless/Views/NormalPage.cshtml" />
+      <File FileName="Umbreact.UmbHeadless/Controllers/UmApiControllers/ContentBlockController.cs" />
+      <File FileName="Umbreact.UmbHeadless/Business/ContentSerializer.cs" />
+      <File FileName="Umbreact.UmbHeadless/Models/Prop.cs" Line="10" Column="30" />
+      <File FileName="Umbreact.UmbHeadless/Models/BlockProps.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,16 +24,13 @@
                 <Node name="UmApiControllers" expanded="True" />
               </Node>
               <Node name="Models" expanded="True">
-                <Node name="BlockProps.cs" selected="True" />
+                <Node name="Prop.cs" selected="True" />
               </Node>
               <Node name="Views" expanded="True" />
               <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
