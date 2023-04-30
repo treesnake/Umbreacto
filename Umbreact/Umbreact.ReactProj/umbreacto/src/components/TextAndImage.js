@@ -13,16 +13,16 @@ class TextAndImage extends React.Component {
 
     render() {        
         return (
-            <div class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
+            <div className="w3-row-padding w3-padding-64 w3-container">
+  <div className="w3-content">
+    <div className="w3-twothird">
       <h1>{this.state.header}</h1>
       
       <div dangerouslySetInnerHTML={{__html: this.state.text}} />
     </div>
 
-    <div class="w3-third w3-center">
-      <img class="w3-image" src={this.state.image  + "?width=600&height=800"} />
+    <div className="w3-third w3-center">
+      <img className="w3-image" src={this.state.image  + "?width=600&height=800"} />
     </div>
   </div>
 </div>

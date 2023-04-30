@@ -12,8 +12,8 @@ class FullWidthTextBlock extends React.Component {
 
     render() {        
         return (
-            <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-                <h1 class="w3-margin w3-xlarge">{this.state.header}</h1>
+            <div className="w3-container w3-black w3-center w3-opacity w3-padding-64">
+                <h1 className="w3-margin w3-xlarge">{this.state.header}</h1>
                 <div dangerouslySetInnerHTML={{__html: this.state.text}} />
             </div>
         );

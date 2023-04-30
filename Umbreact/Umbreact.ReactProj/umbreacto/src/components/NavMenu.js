@@ -27,21 +27,21 @@ export class NavMenu extends Component {
 
   render() {
     return (
-      <div class="w3-top">
-        <div class="w3-bar w3-red w3-card w3-left-align w3-large">
-          <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <div className="w3-top">
+        <div className="w3-bar w3-red w3-card w3-left-align w3-large">
+          <a className="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" title="Toggle Navigation Menu"><i className="fa fa-bars"></i></a>
           {this.state.navItems.map(navItem => {
                         return (
-                          <a href={`${navItem.Url}`} class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">{navItem.Label}</a>
+                          <a key={navItem.DisplayId} href={`${navItem.Url}`} className="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">{navItem.Label}</a>
                           );
                     })}
         </div>
 
-        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+        <div id="navDemo" className="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
           
           {this.state.navItems.map(navItem => {
                         return (
-                          <a href={`${navItem.Url}`} class="w3-bar-item w3-button w3-padding-large">{navItem.Label}</a>
+                          <a key={navItem.DisplayId} href={`${navItem.Url}`} className="w3-bar-item w3-button w3-padding-large">{navItem.Label}</a>
                           );
                     })}
         </div>

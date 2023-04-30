@@ -31,19 +31,19 @@ class ContentBlocks extends React.Component {
                         if(block.Alias == "fullWidthText")
                         {
                             return(
-                            <FullWidthTextBlock stuff={block.Props} />
+                            <FullWidthTextBlock key={block.BlockDisplayId} stuff={block.Props} />
                             );
                         }
                         if(block.Alias == "textAndImage")
                         {
                             return(
-                            <TextAndImage stuff={block.Props} />
+                            <TextAndImage key={block.BlockDisplayId} stuff={block.Props} />
                             );
                         }
                         if(block.Alias == "singleCTA")
                         {
                             return(
-                            <CallToActionBlock stuff={block.Props} />
+                            <CallToActionBlock key={block.BlockDisplayId} stuff={block.Props} />
                             );
                         }
                     })}
