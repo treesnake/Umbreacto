@@ -1,4 +1,7 @@
 import React from 'react';
+import { FullWidthTextBlock } from './FullWidthTextBlock';
+import { TextAndImage } from './TextAndImage';
+import { CallToActionBlock } from './CallToActionBlock';
 
 class ContentBlocks extends React.Component {
     constructor(props) {
@@ -14,42 +17,36 @@ class ContentBlocks extends React.Component {
     }
 
     getContentBlocks() {
-        // Simple GET request using fetch
-        //fetch('https://localhost:44349/Umbraco/Api/ContentBlock/GetContentBlocks/1057')
-        //    .then(response => response.json())
-        //    .then(data => this.setState({ contentBlocks: data }));
-
-        fetch('https://localhost:44349/Umbraco/Api/ContentBlock/GetContentBlocks/1057')
+        fetch('https://localhost:44349/Umbraco/Api/ContentBlock/GetContentBlocksByUrl?url=' + window.location.pathname)
         .then(response => response.json())
         .then(data => {
           this.setState({ contentBlocks: data })
         })
-
-        let x = 1;
     }
 
     render() {        
         return (
-            <div className="card text-center m-3">
-                <h5 className="card-header">Simple GET Request</h5>
-                <div className="card-body">
-                    <ul>
+            <div>
                     {this.state.contentBlocks.map(block => {
-                        return (
-                        <li key={`block-${block.BlockDisplayId}`}>
-                            {block.Alias}
-                            <ul>
-                                {block.Props.map(prop => {
-                                    return (
-                                    <li key={`block-${prop.DisplayId}`}>
-                                            {prop.Alias}
-                                    </li>);
-                                })}
-                            </ul>
-                        </li>);
+                        if(block.Alias == "fullWidthText")
+                        {
+                            return(
+                            <FullWidthTextBlock stuff={block.Props} />
+                            );
+                        }
+                        if(block.Alias == "textAndImage")
+                        {
+                            return(
+                            <TextAndImage stuff={block.Props} />
+                            );
+                        }
+                        if(block.Alias == "singleCTA")
+                        {
+                            return(
+                            <CallToActionBlock stuff={block.Props} />
+                            );
+                        }
                     })}
-                    </ul>
-                </div>
             </div>
         );
     }

@@ -1,31 +1,34 @@
 ﻿<Properties StartupConfiguration="{58A5A0ED-8853-4AD0-9C42-F9CCA097EE32}|Umbraco.Web.UI">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Umbreact.UmbHeadless/Models/Prop.cs">
+  <DisabledProjects>
+    <String>UmbReact.ReactProj/UmbReact.ReactProj.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Umbreact.UmbHeadless/Business/ContentSerializer.cs">
     <Files>
       <File FileName="Umbreact.UmbHeadless/Views/_Layout.cshtml" />
       <File FileName="Umbreact.UmbHeadless/Views/NormalPage.cshtml" />
-      <File FileName="Umbreact.UmbHeadless/Controllers/UmApiControllers/ContentBlockController.cs" />
-      <File FileName="Umbreact.UmbHeadless/Business/ContentSerializer.cs" />
-      <File FileName="Umbreact.UmbHeadless/Models/Prop.cs" Line="10" Column="30" />
+      <File FileName="Umbreact.UmbHeadless/Controllers/UmApiControllers/PageContentController.cs" />
+      <File FileName="Umbreact.UmbHeadless/Controllers/UmApiControllers/ContentBlockController.cs" Line="24" Column="1" />
+      <File FileName="Umbreact.UmbHeadless/Business/ContentSerializer.cs" Line="23" Column="63" />
+      <File FileName="Umbreact.UmbHeadless/Models/Prop.cs" />
       <File FileName="Umbreact.UmbHeadless/Models/BlockProps.cs" />
+      <File FileName="Umbreact.UmbHeadless/Controllers/UmApiControllers/NavController.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Umbreact" expanded="True">
             <Node name="Umbreact.UmbHeadless" expanded="True">
-              <Node name="Business" expanded="True" />
+              <Node name="Business" expanded="True">
+                <Node name="ContentSerializer.cs" selected="True" />
+              </Node>
               <Node name="Controllers" expanded="True">
                 <Node name="UmApiControllers" expanded="True" />
               </Node>
-              <Node name="Models" expanded="True">
-                <Node name="Prop.cs" selected="True" />
-              </Node>
+              <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True" />
               <Node name="appsettings.json" expanded="True" />
             </Node>
@@ -34,5 +37,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Umbreact.UmbHeadless PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Collapse, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
-import { Link } from 'react-router-dom';
 
 export class NavMenu extends Component {
   static displayName = NavMenu.name;
@@ -8,39 +6,46 @@ export class NavMenu extends Component {
   constructor (props) {
     super(props);
 
-    this.toggleNavbar = this.toggleNavbar.bind(this);
     this.state = {
-      collapsed: true
+      collapsed: true,
+      navItems: []
     };
   }
 
-  toggleNavbar () {
-    this.setState({
-      collapsed: !this.state.collapsed
-    });
+  componentDidMount() {
+    this.getMenuItems();
+}
+
+  getMenuItems()
+  {
+    fetch('https://localhost:44349/Umbraco/Api/Nav/GetNavItems')
+        .then(response => response.json())
+        .then(data => {
+          this.setState({ navItems: data })
+        })
   }
 
   render() {
     return (
-      <header>
-        <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" container light>
-          <NavbarBrand tag={Link} to="/">Reactbert</NavbarBrand>
-          <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-          <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
-            <ul className="navbar-nav flex-grow">
-              <NavItem>
-                <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink tag={Link} className="text-dark" to="/counter">Counter</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink tag={Link} className="text-dark" to="/fetch-data">Fetch data</NavLink>
-              </NavItem>
-            </ul>
-          </Collapse>
-        </Navbar>
-      </header>
+      <div class="w3-top">
+        <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+          <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+          {this.state.navItems.map(navItem => {
+                        return (
+                          <a href={`${navItem.Url}`} class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">{navItem.Label}</a>
+                          );
+                    })}
+        </div>
+
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+          
+          {this.state.navItems.map(navItem => {
+                        return (
+                          <a href={`${navItem.Url}`} class="w3-bar-item w3-button w3-padding-large">{navItem.Label}</a>
+                          );
+                    })}
+        </div>
+    </div>
     );
   }
 }
