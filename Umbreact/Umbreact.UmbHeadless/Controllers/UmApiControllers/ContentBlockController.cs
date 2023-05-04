@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AspNetCore.Authentication;
+using Newtonsoft.Json;
 using Umbraco.Cms.Core.Web;
 using Umbraco.Cms.Web.Common;
 using Umbraco.Cms.Web.Common.Controllers;
@@ -22,6 +23,7 @@ namespace Umbreact.UmbHeadless.Controllers.UmApiControllers
 
         public string GetContentBlocks(int id)
         {
+
             string returnVal = "";
             string _myDomain = HttpContext.Request.Scheme + "://" + HttpContext.Request.Host;
             List<BlockProps> contentBlockProps = new List<BlockProps>();
